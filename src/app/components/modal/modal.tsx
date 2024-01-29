@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import styles from './index.module.scss'
 
 interface IModalProps {
@@ -8,6 +8,22 @@ interface IModalProps {
 }
 
 export default function Modal({ isOpen, onClose, children }: IModalProps) {
+
+    useEffect(() => {
+        const handleKeyPress = (event: { key: string; }) => {
+            if (event.key === 'Escape') {
+                onClose && onClose();
+            }
+        };
+
+        if (isOpen) {
+            window.addEventListener('keydown', handleKeyPress);
+        }
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [isOpen, onClose]);
 
     return (
         <>
