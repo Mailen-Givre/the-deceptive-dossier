@@ -16,7 +16,7 @@ export default function Folders() {
 
     return (
         <div className={styles.foldersBackground}>
-            <div>
+            <div className={styles.folderTabContainer}>
                 <div className={styles.tabContainer}>
                     {tabs.map((tab, index) => (
                         <div
