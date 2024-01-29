@@ -9,10 +9,10 @@ export default function Coiffeur() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [object, setObject] = useState<string>('')
 
-    const coiffeurProfile = "La peluquera. Es extranjera, no habla español. Se encargaba de cortarle el pelo y teñirselo siempre del mismo color. Le teñía el pelo todas las mañanas. Algunas de las tinturas que utilizaba eran tóxicas."
+    const coiffeurProfile = "La peluquera. Es extranjera, no habla español. Se encargaba de cortarle el pelo y teñirselo siempre del mismo color. Le teñía el pelo todas las mañanas."
 
     const dyeBox = "La caja de las tinturas donde preparaba los colores con sus respectivos nombres."
-    const colorList = "Lista de los colores que prepataba... creo que marcaba cuáles eran los tóxicos pero no entiendo qué dice."
+    const colorList = "Lista de los colores que prepataba. Justo ese día empezó a usar una marca nueva y algunos colores eran tóxicos, los marcó pero no entiendo cuáles son."
 
     const onClose = () => {
         setIsOpen(false)

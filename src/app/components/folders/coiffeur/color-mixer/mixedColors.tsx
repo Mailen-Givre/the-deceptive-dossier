@@ -21,7 +21,8 @@ export const mixedColors = [
         colors: [1, 5],
         name: 'verde pastel',
         codeName: 'สีพาสเทลเวิร์ด',
-        color: '#80ED80'
+        color: '#80ED80',
+        isToxic: true
     },
     {
         colors: [1, 6],
@@ -53,7 +54,6 @@ export const mixedColors = [
         name: 'rusty',
         codeName: 'สนิม',
         color: '#805B00',
-        isToxic: true
     },
     {
         colors: [3, 4],
@@ -78,7 +78,8 @@ export const mixedColors = [
         colors: [4, 5],
         name: 'celeste',
         codeName: 'เซเลสเต',
-        color: '#009AD5'
+        color: '#009AD5',
+        isToxic: true
     },
     {
         colors: [4, 6],
