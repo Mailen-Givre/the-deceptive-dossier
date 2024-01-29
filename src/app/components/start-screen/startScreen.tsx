@@ -9,6 +9,7 @@ interface IStartScreenProps {
 export default function StartScreen({ setStartIsLock }: IStartScreenProps) {
     const [isHint, setIsHint] = useState<boolean>(false)
     const [isShown, setIsShown] = useState<boolean>(false)
+    const [isInvalid, setIsInvalid] = useState<boolean>(false)
 
     const hint = 'Pista: El principio de cada solsticio, el final de cada caos, la punta de cada sistema, el centro del oasis.'
 
@@ -22,6 +23,8 @@ export default function StartScreen({ setStartIsLock }: IStartScreenProps) {
     const checkPassword = (password: string) => {
         if (password === actualPassword) {
             setStartIsLock(false)
+        } else {
+            setIsInvalid(true)
         }
     }
 
@@ -37,7 +40,8 @@ export default function StartScreen({ setStartIsLock }: IStartScreenProps) {
                     <img src="/hidden.png" alt="" onClick={() => setIsShown(false)} /> :
                     <img src="/seen.png" alt="" onClick={() => setIsShown(true)} />}
             </div>
-            {!isHint ? <p onClick={() => setIsHint(true)}>No me acuerdo la contraseña</p> :
+            {isInvalid && <p className={styles.invalidPassword}>Contraseña inválida. Intente de nuevo.</p>}
+            {!isHint ? <p className={styles.forgotPassword} onClick={() => setIsHint(true)}>No me acuerdo la contraseña</p> :
                 <h6>{hint}</h6>
             }
         </div>
