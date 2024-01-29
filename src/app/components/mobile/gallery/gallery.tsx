@@ -10,6 +10,7 @@ export const GalleryPhotos = () => {
             src: "/gallery/cat1.jpeg",
             width: 300,
             height: 174,
+
         },
         {
             src: "/gallery/cat2.avif",
@@ -50,7 +51,7 @@ export const GalleryPhotos = () => {
 
     return (
         <div style={{ width: '50rem', margin: '25% 0' }}>
-            <Gallery images={images} />
+            <Gallery enableImageSelection={false} images={images} />
         </div>
     );
 };
