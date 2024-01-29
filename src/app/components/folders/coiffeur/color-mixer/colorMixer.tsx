@@ -19,14 +19,17 @@ export default function ColorMixer() {
 
     const handleColors = (color: number) => {
         const newSelectedColors = [...selectedColors];
-        const isColorSelected = newSelectedColors.includes(color);
-        if (!isColorSelected) {
-            firstSelected ? (newSelectedColors[0] = color) : (newSelectedColors[1] = color);
-            setSelectedColors(newSelectedColors);
-            setFirstSelected(!firstSelected);
-            handleMixedColor(newSelectedColors);
+
+        if (firstSelected && selectedColors[0] !== 0 && selectedColors[1] !== 0) {
+            newSelectedColors[0] = color;
+            newSelectedColors[1] = 0;
+        } else {
+            newSelectedColors[firstSelected ? 0 : 1] = color;
         }
-    }
+        setSelectedColors(newSelectedColors);
+        setFirstSelected(!firstSelected);
+        handleMixedColor(newSelectedColors);
+    };
 
 
     const handleMixedColor = (newSelectedColors: number[]) => {
