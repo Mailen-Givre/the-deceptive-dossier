@@ -44,6 +44,7 @@ export const MusicBoxClosed = ({ setIsOpen }: IMusicBoxClosedProps) => {
 
     return (
         <div className={styles.musicBoxClosed}>
+            <p>Asegurate de tener el audio activado, esta pantalla posee sonido.</p>
             <div className={styles.letterContainer}>
                 {letters && letters.length > 0 && letters.map((letter, index) => (
                     <LetterPicker key={index} setLetters={setLetters} index={index} value={letter} />
