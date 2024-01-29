@@ -1,0 +1,136 @@
+.answer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .murder {
+        display: flex;
+    }
+
+    .guessButton {
+        margin: 2rem auto;
+        background-color: #3DD1E7;
+        border: 0 solid #E5E7EB;
+        box-sizing: border-box;
+        color: #000000;
+        display: flex;
+        font-weight: 400;
+        justify-content: center;
+        line-height: 1rem;
+        padding: 1rem 1.65rem;
+        position: relative;
+        text-align: center;
+        text-decoration: none #000000 solid;
+        text-decoration-thickness: auto;
+        position: relative;
+        cursor: pointer;
+        transform: rotate(-2deg);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        height: 4rem;
+        width: 20rem;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border: 1px solid #000000;
+            bottom: 4px;
+            left: 4px;
+            width: 20rem;
+            height: 4rem;
+        }
+
+        &:hover:after {
+            bottom: 2px;
+            left: 2px;
+        }
+
+        @media (min-width: 768px) {
+            padding: 1.25rem 3rem;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.culprit {
+    position: relative;
+
+    p {
+        visibility: hidden;
+        position: absolute;
+        left: 16%;
+        top: 15%;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    &:hover img {
+        filter: grayscale(1);
+    }
+
+    &:hover p {
+        visibility: visible;
+    }
+}
+
+.culpritSelected {
+    img {
+        filter: grayscale(1);
+    }
+
+    p {
+        visibility: visible;
+    }
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.timePicker {
+    color: black;
+
+    >div {
+        background-color: white;
+        padding: 0 1rem;
+        border-radius: 4px;
+
+    }
+}
+
+.datePicker {
+    width: 12rem;
+    color: black;
+}
+
+.congrats {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000ad;
+    overflow: hidden;
+
+    h2 {
+        color: greenyellow;
+        font-size: 5rem;
+    }
+}

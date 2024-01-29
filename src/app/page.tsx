@@ -1,95 +1,36 @@
-import Image from "next/image";
+'use client'
+
 import styles from "./page.module.css";
+import { MusicBox } from "./components/musicBox/musicBox";
+import { Arrow } from "./components/arrow/arrow";
+import { useState } from "react";
+import Folders from "./components/folders/folders";
+import Mobile from "./components/mobile/mobile";
+import StartScreen from "./components/start-screen/startScreen";
+import { Congrats } from "./components/guess/congrats";
+import { useCongratsContext } from "./congratsContext";
 
 export default function Home() {
+  const [page, setPage] = useState<number>(3)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isLock, setIsLock] = useState<boolean>(true)
+  const [isStartLock, setStartIsLock] = useState<boolean>(true)
+
+  const { isCongrats } = useCongratsContext()
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div className={styles.div}>
+      {isCongrats && <Congrats></Congrats>}
+      {isStartLock ? <StartScreen setStartIsLock={setStartIsLock}></StartScreen> :
+        (
+          <>
+            {page > 1 && <Arrow isLeft={true} numberPage={page - 1} setPage={setPage}></Arrow>}
+            {page < 3 && <Arrow isLeft={false} numberPage={page + 1} setPage={setPage}></Arrow>}
+            {page === 3 && <Folders></Folders>}
+            {page === 2 && <Mobile setIsLock={setIsLock} isLock={isLock}></Mobile>}
+            {page === 1 && <MusicBox isOpen={isOpen} setIsOpen={setIsOpen}></MusicBox>}
+          </>
+        )}
+    </div >
   );
 }

@@ -1,0 +1,16 @@
+.dyeNotebook {
+    background-color: white;
+    padding: 1rem;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 10rem;
+        height: 3rem;
+    }
+
+    img {
+        height: 3rem;
+    }
+}

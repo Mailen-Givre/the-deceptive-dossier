@@ -1,0 +1,59 @@
+.characterFile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    p {
+        font-family: 'Caveat', cursive;
+        font-size: 2rem;
+    }
+}
+
+.objects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        max-height: 20rem;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        max-width: 20rem;
+
+        &:hover {
+            box-shadow: inset 0px 0px 30px 20px #04D9FF,
+                0px 0px 30px 20px #04D9FF;
+        }
+    }
+}
+
+.medicine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-family: 'Caveat', cursive;
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    ul {
+        background-color: #fff7ed;
+        padding: 1rem 2rem;
+        width: fit-content;
+        border-radius: 5px;
+    }
+
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+.medicalRecord {
+    filter: blur(2px);
+}

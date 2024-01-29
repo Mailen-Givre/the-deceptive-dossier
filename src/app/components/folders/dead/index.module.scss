@@ -1,0 +1,78 @@
+.characterFile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    p {
+        font-family: 'Caveat', cursive;
+        font-size: 1.75rem;
+    }
+}
+
+.objects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        max-height: 15rem;
+        cursor: pointer;
+        margin-bottom: 2rem;
+
+        &:hover {
+            box-shadow: inset 0px 0px 30px 20px #04D9FF,
+                0px 0px 30px 20px #04D9FF;
+        }
+    }
+
+    .photo {
+        margin: 5rem 0;
+        transform: skew(-10deg, -10deg);
+        width: 10rem;
+    }
+}
+
+.watch {
+    height: 40rem;
+
+    img {
+        height: 100%;
+        object-fit: contain;
+        position: relative;
+    }
+
+    p {
+        position: absolute;
+        top: 35%;
+        left: 24%;
+        font-size: 3rem;
+    }
+}
+
+.photoContainer {
+    height: 50rem;
+    width: 80rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 30rem;
+    }
+}
+
+.download {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    bottom: 5rem;
+    right: 5rem;
+
+    &:hover {
+        box-shadow: inset 0px 0px 30px 20px #04D9FF,
+            0px 0px 30px 20px #04D9FF;
+    }
+}

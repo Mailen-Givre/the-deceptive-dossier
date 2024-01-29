@@ -1,0 +1,32 @@
+.supermarket {
+    background-image: url("/supermarket.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100rem;
+    position: relative;
+    height: 47rem;
+    width: 27rem;
+
+    input {
+        position: absolute;
+        left: 9%;
+        top: 43%;
+        height: 2rem;
+        width: 19rem;
+        background-color: #9DC344;
+        padding: 1rem;
+        color: white;
+        border: none;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 1rem;
+        letter-spacing: 4px;
+    }
+
+    img {
+        position: absolute;
+        left: 27%;
+        top: 52%;
+        height: 20rem;
+    }
+}

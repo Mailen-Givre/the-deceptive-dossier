@@ -1,0 +1,86 @@
+.characterFile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+
+    p {
+        font-family: 'Caveat', cursive;
+        font-size: 2rem;
+    }
+}
+
+.objects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        width: 30rem;
+    }
+
+    img {
+        cursor: pointer;
+        margin-bottom: 2rem;
+        width: 30rem;
+
+        &:hover {
+            box-shadow: inset 0px 0px 30px 20px #04D9FF,
+                0px 0px 30px 20px #04D9FF;
+        }
+    }
+}
+
+.potionsContainer {
+    width: 40rem;
+
+    img {
+        width: 100%;
+    }
+
+    h4 {
+        font-family: 'Caveat', cursive;
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .potionsRiddle {
+        background-color: #fff7ed;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            width: 4rem;
+        }
+    }
+
+    .flowers {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 5rem;
+
+        img {
+            width: 4rem;
+            border-radius: 10px;
+        }
+
+        .selectFlower {
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: inset 0px 0px 30px 20px #04D9FF,
+                    0px 0px 30px 20px #04D9FF;
+            }
+        }
+    }
+}

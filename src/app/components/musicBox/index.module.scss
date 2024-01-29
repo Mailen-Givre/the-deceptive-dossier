@@ -1,0 +1,46 @@
+.musicBoxClosed {
+    background-image: url("/music-box-closed.jpg");
+    background-size: cover;
+    background-position: 25% 60%;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.letterContainer {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 10rem;
+    left: 40%;
+}
+
+.musicBoxOpened {
+    background-image: url("/music-box-opened.jpg");
+    background-size: cover;
+    background-position: 25% 60%;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    img:first-child {
+        position: absolute;
+        left: 30%;
+        bottom: 5rem;
+        filter: blur(4px);
+        transform: rotate(10deg);
+        height: 30rem;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 30px 20px #04D9FF;
+        }
+    }
+
+    img:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        bottom: 5rem;
+        height: 25rem;
+    }
+}

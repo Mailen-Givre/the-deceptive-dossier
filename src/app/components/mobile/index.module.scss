@@ -1,0 +1,60 @@
+.textile {
+    background-image: url("/fabric.webp");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.mobile {
+    margin: 0 auto;
+    background-image: url("/phone.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 25rem;
+    background-position: 50%;
+    position: relative;
+
+    .icons {
+        position: absolute;
+        left: 13%;
+        top: 8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    img {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+    }
+
+    .interactive {
+        cursor: pointer;
+    }
+
+    .interactive:hover {
+        box-shadow: inset 0px 0px 30px 20px #04D9FF,
+            0px 0px 30px 20px #04D9FF;
+    }
+}
+
+.lockScreen {
+    position: absolute;
+    left: 15%;
+    top: 8rem;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        font-size: 5rem;
+    }
+}

@@ -1,0 +1,29 @@
+.characterFile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    p {
+        font-family: 'Caveat', cursive;
+        font-size: 1.75rem;
+    }
+}
+
+.objects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 2rem;
+
+        &:hover {
+            box-shadow: inset 0px 0px 30px 20px #04D9FF,
+                0px 0px 30px 20px #04D9FF;
+        }
+    }
+}

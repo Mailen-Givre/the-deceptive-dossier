@@ -1,0 +1,77 @@
+.colorMixer {
+    background-color: rgb(239, 234, 234);
+    padding: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    gap: 4rem;
+    height: 20rem;
+}
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.color {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: inset 0px 0px 20px 10px #04D9FF,
+            0px 0px 20px 10px #04D9FF;
+    }
+}
+
+.color1 {
+    @extend .color;
+    background-color: #FFED00;
+}
+
+.color2 {
+    @extend .color;
+    background-color: #FF0000;
+}
+
+.color3 {
+    @extend .color;
+    background-color: #FF00AB;
+}
+
+.color4 {
+    @extend .color;
+    background-color: #0047AB;
+}
+
+.color5 {
+    @extend .color;
+    background-color: #00EDFF;
+}
+
+.color6 {
+    @extend .color;
+    background-color: #00B500;
+}
+
+.selectedColor {
+    border: 3px solid black;
+}
+
+.mixedColor {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 2rem;
+}
+
+.mixedColorContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-size: 20px;
+}
