@@ -23,6 +23,10 @@
     align-items: center;
     padding: 10px 20px;
     cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 30px 20px #04D9FF;
+    }
 }
 
 .tabNotSelected {
