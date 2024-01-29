@@ -34,7 +34,7 @@ export default function StartScreen({ setStartIsLock }: IStartScreenProps) {
             <div className={styles.inputs}>
                 {isShown ?
                     <input type="text" onKeyUp={(e) => handlePassword(e)} /> :
-                    <input type="password" onKeyUp={(e) => handlePassword(e)} />
+                    <input type="password" onChange={() => setIsInvalid(false)} onKeyUp={(e) => handlePassword(e)} />
                 }
                 {isShown ?
                     <img src="/hidden.png" alt="" onClick={() => setIsShown(false)} /> :
