@@ -1,39 +1,56 @@
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { Gallery, Image } from "react-grid-gallery";
 import 'swiper/css';
 
 export const GalleryPhotos = () => {
 
-    const photos = [
-        '/gallery/cat1.jpeg',
-        '/gallery/cat2.avif',
-        '/gallery/cat3.webp',
-        '/gallery/hibiscus.webp',
-        '/gallery/cat4.jpeg',
-        '/gallery/cat5.jpeg',
-        '/gallery/the-dead.png',
-        '/gallery/cat6.jpeg',
+    const images: Image[] = [
+        {
+            src: "/gallery/cat1.jpeg",
+            width: 300,
+            height: 174,
+        },
+        {
+            src: "/gallery/cat2.avif",
+            width: 320,
+            height: 212,
+        },
+        {
+            src: "/gallery/hibiscus.webp",
+            width: 320,
+            height: 174,
+        },
+        {
+            src: "/gallery/cat3.webp",
+            width: 320,
+            height: 212,
+        },
+        {
+            src: "/gallery/cat4.jpeg",
+            width: 320,
+            height: 212,
+        },
+        {
+            src: "/gallery/cat5.jpeg",
+            width: 320,
+            height: 212,
+        },
+        {
+            src: "/gallery/the-dead.png",
+            width: 320,
+            height: 400,
+        },
+        {
+            src: "/gallery/cat6.jpeg",
+            width: 320,
+            height: 212,
+        }
     ];
 
     return (
         <div style={{ width: '50rem', margin: '25% 0' }}>
-            <Swiper
-                direction="horizontal"
-                spaceBetween={5}
-                slidesPerView={2}
-                navigation
-                pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
-
-            >
-                {
-                    photos.map((photo, index) => (
-                        <SwiperSlide key={index}>
-                            <img src={photo} alt="" style={{ width: '100%', height: '100%', cursor: 'pointer' }} />
-                        </SwiperSlide>
-                    ))
-                }
-            </Swiper>
+            <Gallery images={images} />
         </div>
     );
 };
