@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './index.module.scss'
-import { actualPassword } from '@/app/answers';
+import { actualPassword, passwordSentence, passwordSentenceLong } from '@/app/answers';
 
 interface IStartScreenProps {
     setStartIsLock: (startIsLock: boolean) => void
@@ -21,7 +21,8 @@ export default function StartScreen({ setStartIsLock }: IStartScreenProps) {
     }
 
     const checkPassword = (password: string) => {
-        if (password.toLowerCase() === actualPassword) {
+        const formatedPassword = password.split(" ").join("").toLowerCase()
+        if ([actualPassword, passwordSentence, passwordSentenceLong].includes(formatedPassword)) {
             setStartIsLock(false)
         } else {
             setIsInvalid(true)
