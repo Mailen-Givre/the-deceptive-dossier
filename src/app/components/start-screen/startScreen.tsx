@@ -21,7 +21,7 @@ export default function StartScreen({ setStartIsLock }: IStartScreenProps) {
     }
 
     const checkPassword = (password: string) => {
-        if (password === actualPassword) {
+        if (password.toLowerCase() === actualPassword) {
             setStartIsLock(false)
         } else {
             setIsInvalid(true)
