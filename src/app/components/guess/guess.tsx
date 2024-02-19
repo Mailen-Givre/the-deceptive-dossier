@@ -18,7 +18,7 @@ interface IGuesses {
 }
 
 
-export const Guess = () => {
+export const Guess = (): JSX.Element => {
 
     const { setIsCongrats } = useCongratsContext()
     const [culprits, setCulprits] = useState<string[]>([])

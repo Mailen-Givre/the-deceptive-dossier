@@ -2,12 +2,12 @@
 
 import React, { createContext, useContext, ReactNode, useState } from "react";
 
-interface CongratsContextProps {
+interface ICongratsContextProps {
     isCongrats: boolean;
     setIsCongrats: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CongratsContext = createContext<CongratsContextProps | undefined>(undefined);
+const CongratsContext = createContext<ICongratsContextProps | undefined>(undefined);
 
 export const CongratsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [isCongrats, setIsCongrats] = useState<boolean>(false);
@@ -19,7 +19,7 @@ export const CongratsProvider: React.FC<{ children: ReactNode }> = ({ children }
     );
 };
 
-export const useCongratsContext = () => {
+export const useCongratsContext = (): ICongratsContextProps => {
     const context = useContext(CongratsContext);
     if (!context) {
         throw new Error("useCongratsContext must be used within a CongratsProvider");

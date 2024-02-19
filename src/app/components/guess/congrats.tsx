@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import Confetti from 'react-confetti'
 
 
-export const Congrats = () => {
+export const Congrats = (): JSX.Element => {
 
     return (
 

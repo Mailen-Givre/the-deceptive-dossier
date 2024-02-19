@@ -1,6 +1,6 @@
 import styles from './index.module.scss'
 
-export default function Medicine() {
+export default function Medicine(): JSX.Element {
 
     return (
         <>

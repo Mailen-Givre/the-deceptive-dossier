@@ -1,7 +1,7 @@
 import * as Tone from 'tone';
 import styles from './index.module.scss'
 
-export const Piano = () => {
+export const Piano = (): JSX.Element => {
     const handleKeyClick = (note: string) => {
         const synth = new Tone.Synth().toDestination();
         synth.triggerAttackRelease(`${note}4`, '8n');

@@ -5,7 +5,7 @@ import Watch from './watch';
 import Photo from './photo';
 import Modal from '../../modal/modal';
 
-export default function Dead() {
+export default function Dead(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [object, setObject] = useState<string>('')
 

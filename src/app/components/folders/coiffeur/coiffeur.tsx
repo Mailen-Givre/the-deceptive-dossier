@@ -5,7 +5,7 @@ import styles from './index.module.scss'
 import ColorMixer from './color-mixer/colorMixer';
 import DyeNotebook from './notebook/notebook';
 
-export default function Coiffeur() {
+export default function Coiffeur(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [object, setObject] = useState<string>('')
 

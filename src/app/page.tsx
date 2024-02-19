@@ -10,7 +10,7 @@ import StartScreen from "./components/start-screen/startScreen";
 import { Congrats } from "./components/guess/congrats";
 import { useCongratsContext } from "./congratsContext";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   const [page, setPage] = useState<number>(3)
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [isLock, setIsLock] = useState<boolean>(true)

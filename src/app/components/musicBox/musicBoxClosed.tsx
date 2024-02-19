@@ -7,7 +7,7 @@ interface IMusicBoxClosedProps {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const MusicBoxClosed = ({ setIsOpen }: IMusicBoxClosedProps) => {
+export const MusicBoxClosed = ({ setIsOpen }: IMusicBoxClosedProps): JSX.Element => {
     const [letters, setLetters] = useState<string[]>(Array(7).fill(""))
 
     useEffect(() => {

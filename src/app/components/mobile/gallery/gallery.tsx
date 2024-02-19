@@ -3,7 +3,7 @@
 import { Gallery, Image } from "react-grid-gallery";
 import 'swiper/css';
 
-export const GalleryPhotos = () => {
+export const GalleryPhotos = (): JSX.Element => {
 
     const images: Image[] = [
         {

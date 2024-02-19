@@ -6,7 +6,7 @@ import Plan from './plan';
 import RecipeBook from './recipeBook';
 import Ticket from './ticket';
 
-export default function Cook() {
+export default function Cook(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [object, setObject] = useState<string>('')
 

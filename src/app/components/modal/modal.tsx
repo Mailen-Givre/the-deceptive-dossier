@@ -7,7 +7,7 @@ interface IModalProps {
     children: ReactNode;
 }
 
-export default function Modal({ isOpen, onClose, children }: IModalProps) {
+export default function Modal({ isOpen, onClose, children }: IModalProps): JSX.Element {
 
     useEffect(() => {
         const handleKeyPress = (event: { key: string; }) => {

@@ -1,6 +1,6 @@
-import styles from './index.module.scss'
 
-export default function Plan() {
+
+export default function Plan(): JSX.Element {
 
     return (
         <img src="/characters/cook/plan.jpeg" alt="" />

@@ -8,7 +8,7 @@ interface ISupermarketProps {
     setCaeInput: (caeInput: string) => void
 }
 
-export const Supermarket = ({ isTicket, setIsTicket, caeInput, setCaeInput }: ISupermarketProps) => {
+export const Supermarket = ({ isTicket, setIsTicket, caeInput, setCaeInput }: ISupermarketProps): JSX.Element => {
 
     const checkCaeNumber = (cae: string) => {
         setIsTicket(cae === caeNumber);

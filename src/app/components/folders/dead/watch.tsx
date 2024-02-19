@@ -1,6 +1,6 @@
 import styles from './index.module.scss'
 
-export default function Watch() {
+export default function Watch(): JSX.Element {
 
     return (
         <div className={styles.watch}>

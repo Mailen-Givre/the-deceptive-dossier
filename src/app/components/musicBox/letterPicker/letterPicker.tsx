@@ -12,18 +12,22 @@ const data = [
     },
     {
         id: '3',
-        value: 'F'
+        value: 'E'
     },
     {
         id: '4',
-        value: 'G'
+        value: 'F'
     },
     {
         id: '5',
-        value: 'A'
+        value: 'G'
     },
     {
         id: '6',
+        value: 'A'
+    },
+    {
+        id: '7',
         value: 'B'
     }
 ];
@@ -34,11 +38,10 @@ interface ILetterPickerProps {
     value: string,
 }
 
-export const LetterPicker = ({ setLetters, index }: ILetterPickerProps) => {
-    const handleOnChange = (target: { id: any; value: any; }) => {
-        const { id, value } = target;
-
-        setLetters((prevLetters: string[]) => {
+export const LetterPicker = ({ setLetters, index }: ILetterPickerProps): JSX.Element => {
+    const handleOnChange = (target: { id: any; value: any; }): void => {
+        const { value } = target;
+        setLetters((prevLetters: string[]): string[] => {
             const newLetters = [...prevLetters];
             newLetters[index] = value;
             return newLetters;

@@ -1,7 +1,7 @@
 import styles from './index.module.scss'
 import { useState } from 'react';
 
-export default function RecipeBook() {
+export default function RecipeBook(): JSX.Element {
     const [isPageOne, setIsPageOne] = useState<boolean>(true)
 
     const handlePageChange = () => {

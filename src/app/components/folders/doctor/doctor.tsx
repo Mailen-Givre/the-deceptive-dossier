@@ -5,7 +5,7 @@ import styles from './index.module.scss'
 import ClinicalRecord from './clinicalRecord';
 import Medicine from './medicine';
 
-export default function Doctor() {
+export default function Doctor(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [object, setObject] = useState<string>('')
 

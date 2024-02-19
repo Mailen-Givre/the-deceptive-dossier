@@ -1,6 +1,6 @@
 import styles from './index.module.scss'
 
-export default function Photo() {
+export default function Photo(): JSX.Element {
 
     return (
         <div className={styles.photoContainer}>

@@ -12,7 +12,7 @@ interface IMixedColor {
     color: string
 }
 
-export default function ColorMixer() {
+export default function ColorMixer(): JSX.Element {
     const [selectedColors, setSelectedColors] = useState<number[]>([0, 0])
     const [firstSelected, setFirstSelected] = useState<boolean>(true)
     const [mixedColor, setMixedColor] = useState<IMixedColor | null>(null)

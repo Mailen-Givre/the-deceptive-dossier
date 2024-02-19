@@ -2,7 +2,7 @@
 import Modal from '../modal/modal';
 import styles from './index.module.scss'
 import { useState } from 'react';
-export const MusicBoxOpened = () => {
+export const MusicBoxOpened = (): JSX.Element => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const onClose = () => {

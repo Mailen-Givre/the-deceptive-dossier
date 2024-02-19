@@ -12,7 +12,7 @@ interface IMobileProps {
     isLock: boolean
 }
 
-export default function Mobile({ setIsLock, isLock }: IMobileProps) {
+export default function Mobile({ setIsLock, isLock }: IMobileProps): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [app, setApp] = useState<string>('')
     const [state, setState] = useState<number[]>([])

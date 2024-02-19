@@ -4,7 +4,7 @@ import Modal from '../../modal/modal';
 import styles from './index.module.scss'
 import Potion from './potion';
 
-export default function Gardener() {
+export default function Gardener(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [object, setObject] = useState<string>('')
     const [isSorted, setIsSorted] = useState<boolean>(false)

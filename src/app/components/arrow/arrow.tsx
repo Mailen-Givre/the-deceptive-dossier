@@ -7,7 +7,7 @@ interface IArrowProps {
     setPage: (page: number) => void
 }
 
-export const Arrow = ({ isLeft, numberPage, setPage }: IArrowProps) => {
+export const Arrow = ({ isLeft, numberPage, setPage }: IArrowProps): JSX.Element => {
 
     const handleClick = () => {
         setPage(numberPage)

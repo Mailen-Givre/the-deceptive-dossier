@@ -6,7 +6,7 @@ interface IStartScreenProps {
     setStartIsLock: (startIsLock: boolean) => void
 }
 
-export default function StartScreen({ setStartIsLock }: IStartScreenProps) {
+export default function StartScreen({ setStartIsLock }: IStartScreenProps): JSX.Element {
     const [isHint, setIsHint] = useState<boolean>(false)
     const [isShown, setIsShown] = useState<boolean>(false)
     const [isInvalid, setIsInvalid] = useState<boolean>(false)

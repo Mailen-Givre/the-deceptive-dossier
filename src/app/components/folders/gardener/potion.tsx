@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import styles from './index.module.scss'
 import { sortedFlowers } from '@/app/answers'
 
@@ -8,7 +8,7 @@ interface IPotionProps {
     flowers: number[],
     setFlowers: (flowers: number[]) => void
 }
-export default function Potion({ isSorted, setIsSorted, flowers, setFlowers }: IPotionProps) {
+export default function Potion({ isSorted, setIsSorted, flowers, setFlowers }: IPotionProps): JSX.Element {
     const blueBell = "/characters/gardener/blue-bell.jpeg"
     const sunflower = "/characters/gardener/sunflower.jpeg"
     const hibiscus = "/characters/gardener/hibiscus.jpeg"

@@ -1,6 +1,5 @@
-import styles from './index.module.scss'
 
-export default function Ticket() {
+export default function Ticket(): JSX.Element {
 
     return (
         <img src="/characters/cook/ticket1.png" alt="" style={{ height: '30rem' }} />

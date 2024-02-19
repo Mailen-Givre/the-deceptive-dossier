@@ -10,7 +10,7 @@ interface ICulpritProps {
 }
 
 
-export const Culprit = ({ culprit, name, handleCulprit, isSelected }: ICulpritProps) => {
+export const Culprit = ({ culprit, name, handleCulprit, isSelected }: ICulpritProps): JSX.Element => {
 
     return (
 

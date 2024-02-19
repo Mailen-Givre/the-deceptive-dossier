@@ -8,7 +8,7 @@ import Coiffeur from './coiffeur/coiffeur';
 import React from 'react';
 import Cover from './cover/cover';
 
-export default function Folders() {
+export default function Folders(): JSX.Element {
     const tabs = ['', 'Miss A.Lee', 'El cocinero', 'La médica', 'El jardinero', 'La peluquera']
     const tabComponents = [Cover, Dead, Cook, Doctor, Gardener, Coiffeur]
 

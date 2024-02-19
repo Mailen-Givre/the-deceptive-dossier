@@ -6,7 +6,7 @@ interface IMusicBox {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const MusicBox = ({ isOpen, setIsOpen }: IMusicBox) => {
+export const MusicBox = ({ isOpen, setIsOpen }: IMusicBox): JSX.Element => {
 
     return (
         <>

@@ -2,7 +2,7 @@
 import { mixedColors } from '../color-mixer/mixedColors';
 import styles from './index.module.scss'
 
-export default function DyeNotebook() {
+export default function DyeNotebook(): JSX.Element {
 
     return (
         <div className={styles.dyeNotebook}>

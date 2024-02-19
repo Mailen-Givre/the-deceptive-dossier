@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Modal from '../../modal/modal';
 import { Guess } from '../../guess/guess';
 
-export default function Cover() {
+export default function Cover(): JSX.Element {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const onClose = () => {
