@@ -2,6 +2,7 @@
 
 import { Gallery, Image } from "react-grid-gallery";
 import 'swiper/css';
+import styles from './index.module.scss';
 
 export const GalleryPhotos = (): JSX.Element => {
 
@@ -50,7 +51,7 @@ export const GalleryPhotos = (): JSX.Element => {
     ];
 
     return (
-        <div style={{ width: '50rem', margin: '25% 0' }}>
+        <div className={styles.galleryContainer}>
             <Gallery enableImageSelection={false} images={images} />
         </div>
     );

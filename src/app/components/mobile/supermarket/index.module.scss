@@ -2,10 +2,13 @@
     background-image: url("/supermarket.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    height: 100rem;
     position: relative;
-    height: 47rem;
+    height: 40rem;
     width: 27rem;
+
+    @media (max-width: 900px) {
+        width: 22rem;
+    }
 
     input {
         position: absolute;

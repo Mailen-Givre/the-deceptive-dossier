@@ -7,6 +7,9 @@
 
     .murder {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80vw;
     }
 
     .guessButton {

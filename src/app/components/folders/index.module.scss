@@ -29,6 +29,16 @@
     padding: 10px 20px;
     cursor: pointer;
 
+    @media (max-width: 900px) {
+        width: 3rem;
+        padding: 10px 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     &:hover {
         box-shadow: 0px 0px 30px 20px #04D9FF;
     }

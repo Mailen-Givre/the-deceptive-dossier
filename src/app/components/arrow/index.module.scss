@@ -4,16 +4,20 @@
     cursor: pointer;
     height: 6rem;
     top: 50%;
+
+    @media (max-width: 900px) {
+        top: 85%;
+    }
 }
 
 .arrowLeft {
     transform: rotate(-90deg);
     @extend .arrow;
-    right: 3rem;
+    right: 2rem;
 }
 
 .arrowRight {
     transform: rotate(90deg);
     @extend .arrow;
-    left: 3rem;
+    left: 2rem;
 }
